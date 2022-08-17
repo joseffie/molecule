@@ -1,0 +1,17 @@
+mixin mainMenu()
+  nav.main-nav&attributes(attributes)
+    ul.main-nav__list
+      each item in mainNavData
+        - var itemClasses = ['main-nav__item']
+
+        if (item.submenu)
+          - itemClasses.push('main-nav__item_dropdown')
+
+        if (item.url === pageUrl)
+          - itemClasses.push('main-nav__item_active')
+
+        li(class=itemClasses)
+          if (item.url)
+            a.main-nav__link(href=item.url)= item.title
+          else
+            span.main-nav__link= item.title

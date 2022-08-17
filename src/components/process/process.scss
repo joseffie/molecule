@@ -1,0 +1,114 @@
+.process {
+  @include adaptive-value('margin-bottom', 130, 70);
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    @include adaptive-value('gap', 80, 50);
+
+    @media (max-width: $breakpoint640) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    font-weight: 700;
+    line-height: 110%;
+    @include adaptive-value('margin-bottom', 48, 22);
+    @include adaptive-font(32, 20);
+  }
+
+  &__btn-wrap {
+    @media (max-width: $breakpoint400) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.process-timeline {
+  &__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    @include adaptive-value('padding-bottom', 72, 30);
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: rem(31);
+      display: inline-block;
+      height: 100%;
+      border-right: 2px solid hsl(0deg 0% 0% / 15%);
+      content: '';
+
+      @media (max-width: $breakpoint768) {
+        left: rem(23);
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+
+      &::after {
+        height: 0;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    @include adaptive-value('gap', 40, 20);
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: rem(62);
+    max-width: rem(62);
+    height: rem(62);
+    background-color: $color-yellow;
+
+    @media (max-width: $breakpoint768) {
+      min-width: rem(46);
+      max-width: rem(46);
+      height: rem(46);
+
+      svg {
+        width: rem(20);
+        height: rem(20);
+      }
+    }
+
+    svg {
+      width: rem(24);
+      height: rem(24);
+      color: $white;
+    }
+  }
+
+  &__content {
+    padding-top: em(12);
+  }
+
+  &__title {
+    margin: 0 0 em(12) 0;
+    font-weight: 400;
+    line-height: 130%;
+    @include adaptive-font(18, 14);
+  }
+
+  &__descr {
+    margin: 0;
+    @include adaptive-font(16, 12);
+  }
+}

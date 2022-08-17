@@ -1,0 +1,52 @@
+include ../container/container.pug
+include ../icon/icon.pug
+
+mixin features()
+  section.features&attributes(attributes)
+    +container()
+      .features__row
+        img.features__image(src='@img/feature-pic.png', alt='Features', loading='lazy')
+        .features__content
+          h4.tag-title.tag-title_yellow Features
+          h2.features__title
+            | See how easy it is to
+            | <span>edit Molecule</span> to your liking.
+          p.features__descr
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Suspendisse varius enim
+            | in eros elementum tristique. Duis cursus,
+            | mi quis viverra ornare, eros dolor interdum
+            | nulla, ut commodo diam libero vitae erat.
+          ul.features__list
+            li.features__item
+              h5.features__name
+                +icon(name='layout', type='mono')
+                | Pages you'll see
+              p.features__feature-descr
+                | Molecule doesn't come with 200+ page
+                | layout — it comes with the pages you'll
+                | actually use.
+            li.features__item
+              h5.features__name
+                +icon(name='picture', type='mono')
+                | Native image effects
+              p.features__feature-descr
+                | Instead of having to add effects to
+                | images in an image editor, simply
+                | replace the existing images and all
+                | effects will appear.
+            li.features__item
+              h5.features__name
+                +icon(name='typography', type='mono')
+                | Global typography
+              p.features__feature-descr
+                | Change the body font once and every
+                | single line of text on the page will
+                | change.
+            li.features__item
+              h5.features__name
+                +icon(name='edit', type='mono')
+                | Global colors
+              p.features__feature-descr
+                | Change the global color swatches and
+                | see your colors change everywhere.

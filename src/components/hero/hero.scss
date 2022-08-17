@@ -1,0 +1,122 @@
+.hero {
+  color: $white;
+  background-color: $color-dark;
+  @include adaptive-value('padding-top', 100, 50);
+  @include adaptive-value('padding-bottom', 100, 50);
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    @include adaptive-value('gap', 90, 40);
+
+    @media (max-width: $breakpoint640) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__content {
+    @media (max-width: $breakpoint400) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin: 0 0 em(13) 0;
+    font-weight: 400;
+    line-height: 120%;
+    @include adaptive-font(38, 24);
+
+    span {
+      color: $color-main;
+    }
+  }
+
+  &__descr {
+    margin: 0 0 em(30) 0;
+    @include adaptive-font(18, 13);
+  }
+
+  &__image {
+    @media (max-width: $breakpoint640) {
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $breakpoint400) {
+      width: 100%;
+    }
+  }
+
+  &__form {
+    display: flex;
+    gap: em(16);
+    align-items: center;
+    @include adaptive-value('margin-bottom', 16, 10);
+
+    @media (max-width: $breakpoint640) {
+      justify-content: center;
+    }
+
+    @media (max-width: $breakpoint400) {
+      flex-wrap: wrap;
+
+      > .btn {
+        flex: 1 1 auto;
+      }
+    }
+
+    > .btn {
+      @include adaptive-font(16, 12);
+    }
+  }
+
+  &__input {
+    min-width: 50%;
+    padding: em(10) em(12) em(10) em(24);
+    color: $base-text-color;
+    line-height: 150%;
+    background-color: $white;
+    border: 1px solid $black;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    @include adaptive-font(16, 12);
+
+    @include placeholder {
+      color: $base-text-color;
+      @include adaptive-font(16, 12);
+    }
+
+    @media (max-width: $breakpoint400) {
+      flex: 1 1 auto;
+    }
+
+    &:focus {
+      border-color: $color-blue-dimmed;
+    }
+  }
+
+  &__submit-tip {
+    @include adaptive-font(12, 10);
+
+    @media (max-width: $breakpoint640) {
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      @include hover {
+        color: $color-blue-dimmed;
+        text-decoration: underline;
+      }
+
+      *,
+      *:visited {
+        color: $color-main;
+      }
+    }
+  }
+}

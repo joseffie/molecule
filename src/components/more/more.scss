@@ -1,0 +1,43 @@
+.more {
+  background-color: $color-dark;
+  @include adaptive-value('margin-bottom', 130, 70);
+  @include adaptive-value('padding-top', 130, 60);
+  @include adaptive-value('padding-bottom', 130, 60);
+
+  *:not(.btn) {
+    color: $white;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__icon {
+    margin-bottom: em(20);
+    @include adaptive-value('width', 160, 100);
+    @include adaptive-value('height', 160, 100);
+  }
+
+  &__title {
+    margin-top: 0;
+    font-weight: 400;
+    line-height: 110%;
+    @include adaptive-value('margin-bottom', 20, 10);
+    @include adaptive-font(32, 20);
+  }
+
+  &__descr {
+    margin: 0 0 em(20) 0;
+    @include adaptive-font(18, 13);
+  }
+
+  &__btn-wrap {
+    display: flex;
+    gap: rem(16);
+    align-items: center;
+    justify-content: center;
+  }
+}

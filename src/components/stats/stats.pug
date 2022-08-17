@@ -1,0 +1,29 @@
+include ../container/container.pug
+
+mixin stats()
+  section.stats&attributes(attributes)
+    +container()
+      .stats__row
+        .stats__content
+          h4.tag-title.tag-title_green Stats
+          h2.stats__title
+            | Teams all over the place have already used
+            | Molecule to get <span>stunning results</span>.
+        .stats__content
+          p.stats__descr
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Suspendisse varius enim
+            | in eros elementum tristique. Duis cursus,
+            | mi quis viverra ornare, eros dolor interdum
+            | nulla, ut commodo diam libero vitae erat.
+          .stats__results
+            .stats__result
+              h5.stats__percent 87%
+              p.stats__result-descr
+                | Lorem ipsum dolor sit amet, consectetur
+                | adipiscing elit.
+            .stats__result
+              h5.stats__percent 99%
+              p.stats__result-descr
+                | Lorem ipsum dolor sit amet, consectetur
+                | adipiscing elit.

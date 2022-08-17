@@ -1,0 +1,29 @@
+// Common CSS styles
+.tag-title {
+  display: inline-block;
+  margin-top: 0;
+  padding: 0 em(26);
+  color: $base-text-color;
+  font-weight: 400;
+  line-height: 150%;
+  border: 2px solid;
+  border-radius: em(100);
+  @include adaptive-value('margin-bottom', 30, 15);
+  @include adaptive-font(16, 12);
+
+  &_yellow {
+    background-color: $color-yellow-dimmed;
+    border: 2px solid $color-yellow;
+  }
+
+  &_green {
+    background-color: $color-green-dimmed;
+    border: 2px solid $color-green;
+  }
+
+  &_blue {
+    color: $white;
+    background-color: $color-blue-dimmed;
+    border: 2px solid $color-blue;
+  }
+}

@@ -1,0 +1,61 @@
+.stats {
+  background-color: $color-silver;
+  @include adaptive-value('margin-bottom', 130, 60);
+  @include adaptive-value('padding-top', 130, 45);
+  @include adaptive-value('padding-bottom', 130, 45);
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptive-value('gap', 100, 40);
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: 1fr;
+      gap: em(25);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 400;
+    line-height: 110%;
+    @include adaptive-font(32, 20);
+
+    span {
+      color: $color-green;
+    }
+  }
+
+  &__descr {
+    margin: 0 0 em(30) 0;
+    @include adaptive-font(18, 14);
+  }
+
+  &__result {
+    @media (max-width: $breakpoint400) {
+      text-align: center;
+    }
+  }
+
+  &__results {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptive-value('gap', 60, 24);
+
+    @media (max-width: $breakpoint400) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__percent {
+    margin: 0 0 2px;
+    color: $color-green;
+    font-weight: 400;
+    @include adaptive-font(48, 26);
+  }
+
+  &__result-descr {
+    margin: 0;
+    @include adaptive-font(16, 13);
+  }
+}

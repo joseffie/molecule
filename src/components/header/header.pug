@@ -1,0 +1,18 @@
+include ../container/container.pug
+include ../burger/burger.pug
+include ../main-nav/main-nav.pug
+include ../icon/icon.pug
+include ../btn/btn.pug
+
+mixin header()
+  header.header&attributes(attributes)
+    +container().header__container
+        a.header__logo(href='index.html')
+          +icon(name='logo-with-name', type='multi')
+
+        +burger()
+
+        +mainMenu()
+
+        .header__btn-wrap
+          +btn('Buy now')(class='header__btn', href='#')

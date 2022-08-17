@@ -1,0 +1,14 @@
+include ../container/container.pug
+include ../btn/btn.pug
+
+mixin get()
+  section.get&attributes(attributes)
+    +container()
+      .get__row
+        .get__content
+          h2.get__title
+            | Ready to start designing?
+          p.get__descr
+            | Molecule is available today!
+        .get__content
+          +btn('Get Molecule', 'white')(href='#')

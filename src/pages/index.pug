@@ -1,0 +1,45 @@
+extends ../base/pug/default.pug
+
+include ../components/header/header.pug
+include ../components/footer/footer.pug
+include ../components/hero/hero.pug
+include ../components/partners/partners.pug
+include ../components/features/features.pug
+include ../components/stats/stats.pug
+include ../components/team/team.pug
+include ../components/more/more.pug
+include ../components/process/process.pug
+include ../components/testimonials/testimonials.pug
+include ../components/newsletter/newsletter.pug
+include ../components/get/get.pug
+include ../components/posts/posts.pug
+
+block pageConfig
+  -
+    title = 'Home'
+    pageUrl = 'index.html'
+
+append links
+  link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+
+block header
+  +header()
+
+block main
+  +hero()
+  +partners()
+  +features()
+  +stats()
+  +team()
+  +more()
+  +process()
+  +testimonials()
+  +newsletter()
+  +posts()
+  +get()
+
+block footer
+  +footer()
+
+prepend scripts
+  script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')

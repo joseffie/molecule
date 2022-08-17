@@ -1,0 +1,28 @@
+include ../container/container.pug
+include ../icon/icon.pug
+
+mixin partners()
+  section.partners&attributes(attributes)
+    +container()
+      h4.partners__title
+        | Used by the leading SaaS companies of tomorrow.
+      ul.partners__grid
+        li.partners__item
+          a.partners__partner-logo(href='#')
+            +icon(name='hooq-logo', type='mono')
+        li.partners__item
+          a.partners__partner-logo(href='#')
+            +icon(name='cai-logo', type='mono')
+        li.partners__item
+          a.partners__partner-logo(href='#')
+            +icon(name='stockholm-logo', type='mono')
+        li.partners__item
+          a.partners__partner-logo(href='#')
+            +icon(name='chill-industries-logo', type='mono')
+        li.partners__item
+          a.partners__partner-logo(href='#')
+            +icon(name='gkdc-logo', type='mono')
+        li.partners__item
+          a.partners__partner-logo(href='#')
+            +icon(name='glassware-logo', type='mono')
+

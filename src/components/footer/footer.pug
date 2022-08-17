@@ -1,0 +1,32 @@
+include ../container/container.pug
+include ../icon/icon.pug
+
+mixin footer()
+  footer.footer&attributes(attributes)
+    +container()
+      .footer__top
+        .footer__row
+          a.footer__logo(href='index.html')
+            +icon(name='logo-with-name', type='multi')
+
+          ul.footer__list
+            each item in footerMainNavData
+              li.footer__item
+                a.footer__link(href=item.url)= item.title
+
+          ul.footer__socials
+            a.footer__social(href='#')
+              +icon(name='instagram-icon', type='mono')
+            a.footer__social(href='#')
+              +icon(name='twitter-icon', type='mono')
+            a.footer__social(href='#')
+              +icon(name='linkedin-icon', type='mono')
+      .footer__bottom
+        .footer__row
+          .footer__copyright
+            | © Molecule, LLC. All rights reserved. Powered by <a href='#'>Webflow</a>.
+
+          ul.footer__list
+            each item in footerPoliciesData
+              li.footer__item
+                a.footer__link.footer__link--smaller(href=item.url)= item.title

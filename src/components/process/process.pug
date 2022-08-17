@@ -1,0 +1,50 @@
+include ../container/container.pug
+include ../icon/icon.pug
+include ../btn/btn.pug
+
+mixin process()
+  section.process&attributes(attributes)
+    +container()
+      .process__row
+        .process__content
+          h4.tag-title.tag-title_yellow Process
+          h2.process__title
+            | What steps are required to build a SaaS
+            | marketing site using the molecule template?
+          .process__btn-wrap
+            +btn('Get molecule')(href='#')
+        .process__timeline.process-timeline
+          ul.process-timeline__items
+            li.process-timeline__item
+              .process-timeline__container
+                .process-timeline__icon
+                  +icon(name='cart', type='mono')
+                .process-timeline__content
+                  h6.process-timeline__title
+                    | Get molecule
+                  p.process-timeline__descr
+                    | Lorem ipsum dolor sit amet, consectetur
+                    | adipiscing elit. Suspendisse varius enim
+                    | in eros elementum tristique.
+            li.process-timeline__item
+              .process-timeline__container
+                .process-timeline__icon
+                  +icon(name='edit', type='mono')
+                .process-timeline__content
+                  h6.process-timeline__title
+                    | Edit fonts, colors, images & text
+                  p.process-timeline__descr
+                    | Lorem ipsum dolor sit amet, consectetur
+                    | adipiscing elit. Suspendisse varius enim
+                    | in eros elementum tristique.
+            li.process-timeline__item
+              .process-timeline__container
+                .process-timeline__icon
+                  +icon(name='publish', type='mono')
+                .process-timeline__content
+                  h6.process-timeline__title
+                    | Publish!
+                  p.process-timeline__descr
+                    | Lorem ipsum dolor sit amet, consectetur
+                    | adipiscing elit. Suspendisse varius enim
+                    | in eros elementum tristique.

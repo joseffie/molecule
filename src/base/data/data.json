@@ -1,0 +1,68 @@
+{
+  "mainNavData": [
+    {
+      "title": "Home",
+      "url": "index.html"
+    },
+    {
+      "title": "About",
+      "url": "#"
+    },
+    {
+      "title": "Pricing",
+      "url": "#"
+    },
+    {
+      "title": "Open positions",
+      "url": "#"
+    },
+    {
+      "title": "Blog",
+      "url": "#"
+    },
+    {
+      "title": "Template",
+      "url": "#"
+    }
+  ],
+  "footerMainNavData": [
+    {
+      "title": "Home",
+      "url": "index.html"
+    },
+    {
+      "title": "About",
+      "url": "#"
+    },
+    {
+      "title": "Pricing",
+      "url": "#"
+    },
+    {
+      "title": "Open positions",
+      "url": "#"
+    },
+    {
+      "title": "Blog",
+      "url": "#"
+    }
+  ],
+  "footerPoliciesData": [
+    {
+      "title": "Licensing",
+      "url": "#"
+    },
+    {
+      "title": "Privacy Policy",
+      "url": "#"
+    },
+    {
+      "title": "Terms & Conditions",
+      "url": "#"
+    },
+    {
+      "title": "Cookie Policy",
+      "url": "#"
+    }
+  ]
+}

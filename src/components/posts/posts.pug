@@ -1,0 +1,72 @@
+include ../container/container.pug
+include ../btn/btn.pug
+
+mixin posts()
+  section.posts&attributes(attributes)
+    +container()
+      .posts__header
+        .posts__row
+          .posts__header-content
+            h4.tag-title.tag-title_blue Blog
+            h2.posts__title
+              | The <span>latest news</span> from Molecule
+            p.posts__descr
+              | Lorem ipsum dolor sit amet, consectetur
+              | adipiscing elit.
+          .posts__header-content.posts__header-content_align-end
+            +btn('View all')(href='#')
+      ul.posts__grid
+        li.posts__post
+          a.posts__thumb(href='#')
+            img(src='@img/blog-thumbs/thumb1.png', alt='', loading='lazy')
+          h3.posts__post-title
+            a(href='#') How to drive sales in SaaS
+          p.posts__post-descr
+            | Vestibulum sit amet urna turpis. Mauris euismod
+            | elit et nisi ultrices, ut faucibus orci tincidunt.
+          .posts__author
+            a.posts__userpic(href='#')
+              img(src='@img/blog-author-userpics/pic1.png', alt='Dwight Schrute', loading='lazy')
+            .posts__author-info
+              h6.posts__author-name
+                a(href='#') Dwight Schrute
+              .posts__date
+                | January 25, 2022
+                span.posts__reading-time 28 min read
+
+        li.posts__post
+          a.posts__thumb(href='#')
+            img(src='@img/blog-thumbs/thumb2.png', alt='', loading='lazy')
+          h3.posts__post-title
+            a(href='#') Hiring the right talent
+          p.posts__post-descr
+            | Nulla rhoncus feugiat eros quis consectetur.
+            | Morbi neque ex, condimentum dapibus congue et,
+            | vulputate ut ligula.
+          .posts__author
+            a.posts__userpic(href='#')
+              img(src='@img/blog-author-userpics/pic2.png', alt='Lexus Simonis', loading='lazy')
+            .posts__author-info
+              h6.posts__author-name
+                a(href='#') Lexus Simonis
+              .posts__date
+                | January 25, 2022
+                span.posts__reading-time 21 min read
+
+        li.posts__post
+          a.posts__thumb(href='#')
+            img(src='@img/blog-thumbs/thumb3.png', alt='', loading='lazy')
+          h3.posts__post-title
+            a(href='#') Is remote work for you? (Yes it is)
+          p.posts__post-descr
+            | Duis tristique sed lorem a vestibulum. Cras commodo
+            | consequat orci, in convallis risus egestas non.
+          .posts__author
+            a.posts__userpic(href='#')
+              img(src='@img/blog-author-userpics/pic3.png', alt='', loading='lazy')
+            .posts__author-info
+              h6.posts__author-name
+                a(href='#') Doug Howell
+              .posts__date
+                | January 25, 2022
+                span.posts__reading-time 29 min read

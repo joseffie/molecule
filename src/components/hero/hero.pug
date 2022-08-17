@@ -1,0 +1,25 @@
+include ../container/container.pug
+include ../btn/btn.pug
+
+mixin hero()
+  section.hero&attributes(attributes)
+    +container()
+      .hero__row
+        .hero__content
+          h1.hero__title
+            | Molecule is a SaaS marketing template
+            | that's <span>easy to modify</span>.
+          p.hero__descr
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Suspendisse varius enim
+            | in eros elementum tristique. Duis cursus,
+            | mi quis viverra ornare, eros dolor interdum
+            | nulla, ut commodo diam libero vitae erat.
+          form.hero__form(action='/')
+            input.hero__input(type='email', placeholder='Enter your email', required)
+            +btn('Sign Up', 'silver')(type='submit')
+          .hero__submit-tip
+            | By clicking Sign Up you're confirming
+            | that you agree with our
+            | <a href='#'>Terms and Conditions</a>.
+        img.hero__image(src='@img/hero.svg', alt='Templates', loading='lazy')

@@ -1,0 +1,71 @@
+.header {
+  padding: em(15) 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba($color-dark, 0.5);
+
+  &__container {
+    display: flex;
+    gap: em(15);
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint1024) {
+      gap: em(30);
+      justify-content: start;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    display: inline-block;
+    overflow-x: hidden;
+    transition: opacity 0.3s ease;
+    will-change: opacity;
+
+    @include hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: $breakpoint1024) {
+      order: 1;
+      margin-right: auto;
+    }
+
+    svg {
+      width: rem(160);
+      height: rem(40);
+    }
+  }
+
+  &__btn-wrap {
+    @media (max-width: $breakpoint1024) {
+      order: 2;
+    }
+
+    @media (max-width: $breakpoint480) {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1065;
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.7s ease, opacity 0.7s ease;
+      pointer-events: none;
+
+      .burger._active ~ & {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &__btn {
+    @media (max-width: $breakpoint480) {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+}

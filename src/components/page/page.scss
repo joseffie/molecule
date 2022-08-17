@@ -1,0 +1,37 @@
+.page {
+  position: relative;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    // IE11 fix
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      display: block;
+    }
+  }
+
+  &__header,
+  &__footer {
+    flex: none;
+  }
+
+  &__header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $zi-fixed;
+    width: 100%;
+  }
+
+  &__main {
+    flex: 1 0 auto;
+    width: 100%;
+    padding-top: var(--header-height);
+  }
+}

@@ -1,0 +1,21 @@
+include ../container/container.pug
+include ../btn/btn.pug
+
+mixin newsletter()
+  section.newsletter&attributes(attributes)
+    +container()
+      .newsletter__block
+        .newsletter__row
+          .newsletter__content
+            h2.newsletter__title Don't miss out!
+            p.newsletter__descr
+              | Sign-up & we'll let you know as soon as
+              | we have something to show off.
+              | (Don't worry, we don't spam).
+          .newsletter__content
+            form.newsletter__form
+              input.newsletter__input(type='email', placeholder='Enter your email', required)
+              +btn('Sign Up')(type='submit')
+            .newsletter__tip
+              | By clicking Sign Up you're confirming that
+              | you agree with our <a href='#'>Terms and Conditions</a>

@@ -1,0 +1,53 @@
+include ../container/container.pug
+include ../icon/icon.pug
+
+mixin testimonials()
+  section.testimonials&attributes(attributes)
+    +container
+      .testimonials__slider.swiper
+        .testimonials__slides.swiper-wrapper
+          .testimonials__slide.swiper-slide
+            .testimonials__slide-inner
+              .testimonials__logo
+                +icon(name='chill-industries-logo', type='mono')
+              blockquote.testimonials__blockquote
+                q
+                  | Using molecule for our web was the best decision
+                  | we made last year — and we made a ton of great
+                  | decisions, trust me!
+              img.testimonials__avatar(src='@img/testimonial-avatar.png', alt='Mark Watney')
+              h5.testimonials__name Mark Watney
+              h6.testimonials__job
+                | Marketing Director, Chill Industries
+
+          .testimonials__slide.swiper-slide
+            .testimonials__slide-inner
+              .testimonials__logo
+                +icon(name='chill-industries-logo', type='mono')
+              blockquote.testimonials__blockquote
+                q
+                  | Using molecule for our web was the best decision
+                  | we made last year — and we made a ton of great
+                  | decisions, trust me!
+              img.testimonials__avatar(src='@img/testimonial-avatar.png', alt='Mark Watney')
+              h5.testimonials__name Mark Watney
+              h6.testimonials__job
+                | Marketing Director, Chill Industries
+
+          .testimonials__slide.swiper-slide
+            .testimonials__slide-inner
+              .testimonials__logo
+                +icon(name='chill-industries-logo', type='mono')
+              blockquote.testimonials__blockquote
+                q
+                  | Using molecule for our web was the best decision
+                  | we made last year — and we made a ton of great
+                  | decisions, trust me!
+              img.testimonials__avatar(src='@img/testimonial-avatar.png', alt='Mark Watney')
+              h5.testimonials__name Mark Watney
+              h6.testimonials__job
+                | Marketing Director, Chill Industries
+
+        .testimonials__pagination.swiper-pagination
+        .testimonials__prev.swiper-button-prev
+        .testimonials__next.swiper-button-next

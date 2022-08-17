@@ -1,0 +1,26 @@
+include ../container/container.pug
+include ../btn/btn.pug
+
+mixin team()
+  section.team&attributes(attributes)
+    +container
+      .team__row
+        .team__content
+          h4.tag-title.tag-title_blue Team
+          h2.team__title
+            | Meet the <span>talented team</span> behind
+            | the molecule SaaS template.
+          p.team__descr
+            | Lorem ipsum dolor sit amet, consectetur
+            | adipiscing elit. Suspendisse varius enim
+            | in eros elementum tristique. Duis cursus,
+            | mi quis viverra ornare, eros dolor interdum
+            | nulla, ut commodo diam libero vitae erat.
+          .team__btn-wrap
+            +btn('Meet the team', 'blue')(href='#')
+        .team__images
+          .team__images-column
+            img(src='@img/team-pics/avatar1.png', alt='Teammate 1', loading='lazy')
+            img(src='@img/team-pics/avatar3.png', alt='Teammate 3', loading='lazy')
+          .team__images-column
+            img(src='@img/team-pics/avatar2.png', alt='Teammate 2', loading='lazy')

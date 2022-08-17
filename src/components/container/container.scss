@@ -1,0 +1,18 @@
+.container {
+  flex-shrink: 0;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0px $container-offset;
+
+  @media (max-width: $container-width) {
+    max-width: 1024px;
+  }
+
+  @media (max-width: $breakpoint1024) {
+    max-width: 768px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    max-width: none;
+  }
+}

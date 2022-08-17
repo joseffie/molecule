@@ -1,0 +1,114 @@
+.testimonials {
+  background-color: $color-silver;
+  @include adaptive-value('padding-top', 130, 50);
+  @include adaptive-value('padding-bottom', 130, 50);
+
+  @media (max-width: $breakpoint400) {
+    margin-bottom: em(70);
+  }
+
+  &__slider {
+    width: 100%;
+    height: auto;
+    padding-bottom: em(40) !important;
+  }
+
+  &__slide-inner {
+    padding: 0 rem(100);
+    text-align: center;
+
+    @media (max-width: $breakpoint560) {
+      padding: 0 rem(40);
+    }
+  }
+
+  &__pagination {
+    bottom: 0 !important;
+
+    .swiper-pagination-bullet {
+      background: $gray-130-dimmed;
+      border-radius: 0;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $gray-130;
+    }
+  }
+
+  &__prev,
+  &__next {
+    width: rem(30) !important;
+    height: rem(30) !important;
+
+    &::after {
+      width: rem(16) !important;
+      height: rem(16) !important;
+      font-size: 1em !important;
+      font-family: $base-font-family !important;
+      content: '' !important;
+    }
+  }
+
+  &__prev {
+    left: 0 !important;
+
+    &::after {
+      background: url('../img/arrows/arrow-left.svg') center center no-repeat !important;
+    }
+  }
+
+  &__next {
+    right: 0 !important;
+
+    &::after {
+      background: url('../img/arrows/arrow-right.svg') no-repeat !important;
+    }
+  }
+
+  &__logo {
+    @include adaptive-value('margin-bottom', 34, 20);
+
+    svg {
+      max-width: rem(130);
+      max-height: rem(40);
+    }
+  }
+
+  &__blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    @include adaptive-value('margin-bottom', 28, 20);
+
+    > q {
+      line-height: 140%;
+      quotes: '\0022''\0022';
+      @include adaptive-font(24, 14);
+    }
+  }
+
+  &__avatar {
+    width: rem(80);
+    height: rem(80);
+    margin-bottom: em(15);
+
+    @media (max-width: $breakpoint640) {
+      width: rem(60);
+      height: rem(60);
+    }
+  }
+
+  &__name,
+  &__job {
+    font-weight: 400;
+    @include adaptive-font(16, 13);
+  }
+
+  &__name {
+    margin: 0 0 em(10) 0;
+  }
+
+  &__job {
+    margin: 0;
+  }
+}

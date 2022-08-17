@@ -1,0 +1,166 @@
+.posts {
+  @include adaptive-value('margin-bottom', 130, 70);
+
+  &__header {
+    @include adaptive-value('margin-bottom', 40, 32);
+
+    &-content_align-end {
+      align-self: flex-end;
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: em(50);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0 0 rem(12) 0;
+    font-weight: 700;
+    line-height: 110%;
+    @include adaptive-font(32, 20);
+
+    span {
+      color: $color-blue;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    @include adaptive-font(18, 14);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include adaptive-value('gap', 32, 20);
+
+    @media (max-width: $breakpoint1024) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint560) {
+      grid-template-columns: 1fr;
+      gap: rem(32);
+    }
+  }
+
+  &__thumb {
+    display: inline-block;
+    width: 100%;
+    min-height: rem(100);
+    overflow: hidden;
+    text-decoration: none;
+    @include adaptive-value('margin-bottom', 43, 18);
+
+    @include hover {
+      > img {
+        transform: scale(1.1);
+      }
+    }
+
+    > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 16px;
+      transition: transform 0.75s ease;
+    }
+  }
+
+  &__post-title {
+    margin: 0 0 rem(9) 0;
+    font-weight: 400;
+    line-height: 140%;
+    @include adaptive-font(24, 17);
+
+    a {
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      @include hover {
+        color: $color-main;
+      }
+
+      &,
+      &:visited {
+        color: $base-text-color;
+      }
+    }
+  }
+
+  &__post-descr {
+    margin-top: 0;
+    @include adaptive-value('margin-bottom', 14, 8);
+    @include adaptive-font(16, 12);
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    @include adaptive-value('gap', 16, 8);
+  }
+
+  &__userpic {
+    display: inline-block;
+    width: rem(48);
+    height: rem(48);
+    overflow: hidden;
+
+    @include hover {
+      > img {
+        transform: scale(1.05);
+      }
+    }
+
+    > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__author-name {
+    margin: 0 0 2px;
+    font-weight: 400;
+    @include adaptive-font(14, 12);
+
+    > a {
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      @include hover {
+        color: $color-main;
+      }
+
+      &,
+      &:visited {
+        color: $base-text-color;
+      }
+    }
+  }
+
+  &__date {
+    @include adaptive-font(14, 12);
+  }
+
+  &__reading-time {
+    &::before {
+      display: inline-block;
+      margin: 0 rem(8);
+      color: inherit;
+      vertical-align: middle;
+      content: '•';
+      @include adaptive-font(16, 14);
+    }
+  }
+}

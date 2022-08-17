@@ -1,0 +1,16 @@
+include ../container/container.pug
+include ../icon/icon.pug
+include ../btn/btn.pug
+
+mixin more()
+  section.more&attributes(attributes)
+    +container().more__container
+      +icon.more__icon(name='logo-no-name', type='multi')
+      h2.more__title Think you've seen enough?
+      p.more__descr
+        | Lorem ipsum dolor sit amet, consectetur
+        | adipiscing elit. Suspendisse varius enim in
+        | eros elementum tristique.
+      .more__btn-wrap
+        +btn('Buy molecule', 'blue')(href='#')
+        +btn('Read more', 'white')(href='#')
